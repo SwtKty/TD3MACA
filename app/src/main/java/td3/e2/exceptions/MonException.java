@@ -1,6 +1,6 @@
 package td3.e2.exceptions;
 
-public class MonException {
+public class MonException extends Throwable {
     private String exp;
 
     public MonException(String exp) {

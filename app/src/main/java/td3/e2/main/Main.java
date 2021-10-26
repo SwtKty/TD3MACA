@@ -1,11 +1,16 @@
 package td3.e2.main;
-/*
-import commandes.*;
-import exceptions.MonException;
-import visitors.*;*/
+
+
+
+import td3.e2.commandes.*;
+import td3.e2.exceptions.MonException;
+import td3.e2.visitorImplement.*;
+import td3.e2.visitors.*;
+import td3.e2.visitable.*;
+
 
 public final class Main {
-	/*
+
 	private final GroupeClient groupeClient;
 	private AbstractVisitor visiteur;
 	
@@ -23,8 +28,8 @@ public final class Main {
 	}
 
 	public static void main(String[] args) throws MonException {
-		AbstractVisitor xmlVisitor = new XMLRapportCommandes();
-		AbstractVisitor printVisitor = new PrintRapportCommandes();
+		AbstractVisitor xmlVisitor = (AbstractVisitor) new XMLRapportCommandes();
+		AbstractVisitor printVisitor = (AbstractVisitor) new PrintRapportCommandes();
 		//
 		Main m = new Main("clients");
 		//
@@ -54,5 +59,5 @@ public final class Main {
 		//
 		m.setVisiteur(xmlVisitor);
 		m.groupeClient.accept((PrePostVisitor)m.visiteur);
-	}*/
+	}
 }
