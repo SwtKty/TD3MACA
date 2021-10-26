@@ -7,18 +7,17 @@ import td3.e2.visitors.Visitor;
 
 public class Ligne implements PrePostVisitable, Visitable {
 
-    private String string;
-    private int entier;
+    private String name;
+    private int sum;
 
-    public Ligne(String string) {
-        this.string = string;
+    public Ligne(String name) {
+        this.name = name;
     }
 
-    public Ligne(String string, int entier) {
-        this.string = string;
-        this.entier = entier;
+    public Ligne(String name, int sum) {
+        this.name = name;
+        this.sum = sum;
     }
-
 
     @Override
     public void accept(PrePostVisitor prePostVisitor) {
@@ -28,5 +27,13 @@ public class Ligne implements PrePostVisitable, Visitable {
     @Override
     public void accept(Visitor visitor) {
 
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getSum() {
+        return sum;
     }
 }
